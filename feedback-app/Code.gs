@@ -9,7 +9,7 @@ function doGet(e) {
   ownerOnly_();
   const t = HtmlService.createTemplateFromFile('Index');
   t.issue = /^\d{4}-\d{2}-\d{2}$/.test(String(e && e.parameter.issue || '')) ? e.parameter.issue : '';
-  return t.evaluate().setTitle('ヒロのAIニュースへの一言').addMetaTag('viewport', 'width=device-width, initial-scale=1');
+  return t.evaluate().setTitle('AIニュースへの一言').addMetaTag('viewport', 'width=device-width, initial-scale=1');
 }
 function saveFeedback(input) {
   ownerOnly_();
